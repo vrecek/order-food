@@ -1,0 +1,35 @@
+@import '../config';
+
+.offer-cont{
+   padding: 2em 0;
+
+   h2{
+      text-align: center;
+      margin-bottom: 2em;
+      color:white;
+      text-shadow: 2px 2px 2px black;
+   }
+
+   article{
+      width:70%;
+      margin:0 auto;
+      @include flex-sa-c;
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 1200px){
+  .offer-cont{
+     article{
+        width:90%;
+     }
+  }
+}
+
+@media (max-width: 768px){
+   .offer-cont{
+      article{
+         width:100%;
+      }
+   }
+}

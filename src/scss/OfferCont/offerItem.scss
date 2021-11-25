@@ -1,0 +1,112 @@
+@import '../config';
+
+.offer-cont{
+   article{
+      section{
+         width:33%;
+         height:24vw;
+         border:2px solid $bluegreen-clr;
+         border-radius: .3em;
+         margin-bottom: 4px;
+         padding:1em 2em;
+         background: linear-gradient(45deg, rgba(173,232,198,.95) 50%, rgba(167,221,206,.95) 50%);
+
+         .img-div{
+            width:8vw;
+            height:35%;
+            overflow: hidden;
+            border-radius: 50%;
+            margin:0 auto .5em auto;
+            border:1px solid $dark-clr;
+
+            img{
+               width:100%;
+               height:100%;
+            }
+         }
+
+         .text-cont{
+            @include flex-sa-c;
+            flex-direction: column;
+            height:65%;
+
+            h1{
+               text-align: center;
+               font-weight: 300;
+               font-size: clamp(.9rem,1.5vw,1.5rem);
+               font-family: 'Luckiest Guy', cursive;
+               margin-bottom: .5em;
+            }
+   
+            p{
+               font-size: clamp(.6rem,1.1vw,.8rem);
+               text-align: center;
+               font-weight: 500;
+            }
+   
+            .btn-div{
+               width:100%;
+   
+               button{
+                  width:100%;
+                  font-size: 1.2rem;
+                  padding:.4em 0;
+                  margin: .5em 0 0 0;
+                  background: none;
+                  outline: 0;
+                  border-radius: .3em;
+                  border:2px solid $blue-clr;
+                  cursor:pointer;
+                  transition: .5s;
+                  @include flex-c-c;
+   
+                  &:hover{
+                     background: cornflowerblue;
+   
+                     span{
+                        color:rgb(250, 246, 246);
+                     }
+                  }
+   
+                  span{
+                     color: $blue-clr;
+                     font-weight: 100;
+                     transition: .5s;
+                     font-size: clamp(.7rem, 1.5vw, 1rem);
+                  }
+               }
+            }
+         }   
+      }
+   }
+}
+
+@media (max-width: 1200px){
+   .offer-cont{
+      article{
+         section{
+            height:30vw;
+
+            .img-div{
+               width: 10vw;
+            }
+         }
+      }
+   }
+ }
+ 
+ @media (max-width: 768px){
+    .offer-cont{
+       article{
+          section{
+             width:15.3em;
+             height:250px;
+
+             .img-div{
+                width:5em;
+             }
+          }
+          
+       }
+    }
+ }

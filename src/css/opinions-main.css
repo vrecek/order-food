@@ -1,0 +1,171 @@
+.opinions {
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 2em;
+}
+
+.opinions h2 {
+  padding: 1em 0 2em 0;
+  text-align: center;
+}
+
+.opinions p.read-more {
+  text-align: center;
+  font-size: clamp(0.9rem, 3vw, 1.4rem);
+}
+
+.opinions p.read-more span {
+  color: #d41e1e;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.opinions p.read-more span:hover {
+  color: seagreen;
+}
+
+.opinions section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opinions section article {
+  background: none;
+  width: 40%;
+  border: 2px solid #303030;
+  border-radius: .4em;
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.opinions section article::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 128, 0, 0.5);
+  border-radius: 0 85% 0 0;
+  z-index: -1;
+}
+
+.opinions section article::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 128, 0, 0.5);
+  border-radius: 85% 0 0 0;
+  z-index: -1;
+}
+
+.opinions section div.img {
+  max-width: 12vw;
+  max-height: 12vw;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #303030;
+}
+
+.opinions section div.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.opinions section div.text {
+  width: 85%;
+  text-align: justify;
+  padding: 1em;
+  font-weight: 500;
+  line-height: 2.5vw;
+  margin: 2em 0;
+  border: 2px solid saddlebrown;
+  border-radius: .3em;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+
+.opinions section div.text::before {
+  content: ',,';
+  position: absolute;
+  left: -5%;
+  bottom: 8%;
+  font-size: 7rem;
+  color: saddlebrown;
+}
+
+.opinions section div.text::after {
+  content: ",,";
+  position: absolute;
+  right: -3%;
+  top: -20%;
+  font-size: 7rem;
+  color: saddlebrown;
+}
+
+.opinions section div.grade svg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.opinions section div.grade p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .opinions section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .opinions section article {
+    width: 95%;
+  }
+  .opinions section article div.img {
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .opinions section article div.text {
+    line-height: normal;
+  }
+  .opinions section article div.text::before, .opinions section article div.text::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .opinions section article {
+    margin-bottom: 5em;
+  }
+  .opinions section article div.grade svg {
+    width: 35px;
+    height: 35px;
+  }
+}

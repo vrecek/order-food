@@ -1,0 +1,29 @@
+// COLORS
+$dark-clr: #303030;
+
+//HOVER
+$red-clr: rgb(212, 30, 30);
+$blue-clr: rgb(0, 110, 255);
+$greenLight-clr: rgb(26, 209, 41);
+$bluegreen-clr: rgb(21, 233, 162);
+
+// FLEX
+@mixin flex-sa-c {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+@mixin flex-c-c {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+// POSITION
+@mixin abs5050{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform:translate(-50%,-50%);
+}

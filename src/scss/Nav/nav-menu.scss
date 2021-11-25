@@ -1,0 +1,49 @@
+@import '../config';
+
+.nav-menu{
+   border:2px solid $blue-clr;
+   background: whitesmoke;
+   position: absolute;
+   right:-5%;
+   top:100%;
+   transition: 1s;
+   width:0;
+   border-radius: 0 0 .5em .5em;
+   z-index: 99999;
+
+   ul{
+      list-style: none;
+      padding:0 .5em;
+      
+      li{
+         margin:1em 0;
+         display: flex;
+         align-items: center;
+
+         a{
+            text-decoration: none;
+            color:$blue-clr;
+            font-weight: 400;
+            margin-left: 3em;
+            transition: .3s;
+
+            &:hover{
+               color:$red-clr;
+            }
+         }
+
+         svg{
+            width:35px;
+            height:35px;
+            color:$dark-clr;
+            border-bottom: 2px solid $dark-clr;
+         }
+      }
+   }
+}
+
+.menu-on{
+   width:255px;
+   max-width: 100%;
+   right:0;
+}

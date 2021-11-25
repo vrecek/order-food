@@ -1,0 +1,37 @@
+.offer-cont {
+  padding: 2em 0;
+}
+
+.offer-cont h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.offer-cont article {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .offer-cont article {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-cont article {
+    width: 100%;
+  }
+}

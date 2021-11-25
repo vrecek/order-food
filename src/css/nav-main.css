@@ -1,0 +1,132 @@
+.nav-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #1ad129;
+  background: #fcfcfc;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99999999;
+}
+
+.nav-main .nav-img,
+.nav-main .nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-main ul.outer-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  width: 40%;
+}
+
+.nav-main ul.outer-ul li {
+  width: 25%;
+  text-align: center;
+}
+
+.nav-main ul.outer-ul li a {
+  color: #303030;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-main ul.outer-ul li a:hover {
+  color: #d41e1e;
+  border-left: 2px solid #d41e1e;
+  border-right: 2px solid #d41e1e;
+  padding: 0 .3em;
+}
+
+.nav-main .nav-img {
+  width: 30%;
+}
+
+.nav-main .nav-icons {
+  width: 30%;
+}
+
+.nav-main .nav-icons div svg {
+  min-height: 30px;
+  min-width: 30px;
+  margin: 0 .5rem;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-main .nav-icons div svg.icon-on {
+  color: #006eff;
+}
+
+.nav-main .nav-icons div svg:hover {
+  color: #006eff;
+}
+
+@media (max-width: 768px) {
+  .nav-main {
+    padding: 1em 0;
+  }
+  .nav-main .nav-img {
+    display: none;
+  }
+  .nav-main ul.outer-ul {
+    width: 70%;
+  }
+  .nav-main .nav-icons {
+    width: 30%;
+    border-left: 2px solid black;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-main {
+    padding: .5em 0;
+  }
+  .nav-main ul.outer-ul {
+    width: 50%;
+  }
+  .nav-main ul.outer-ul li:nth-child(3),
+  .nav-main ul.outer-ul li:nth-child(4) {
+    display: none;
+  }
+  .nav-main ul.outer-ul li a:hover {
+    border: 0;
+    padding: 0;
+  }
+  .nav-main .nav-icons {
+    width: 40%;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}

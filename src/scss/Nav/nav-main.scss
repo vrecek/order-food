@@ -1,0 +1,113 @@
+@import '../config';
+
+.nav-main{
+   @include flex-sa-c;
+   border-bottom: 2px solid $greenLight-clr;
+   background: rgb(252, 252, 252);
+   position: sticky;
+   top:0;
+   z-index: 99999999;
+
+   .nav-img,
+   .nav-icons{
+      @include flex-c-c;
+   }
+
+   ul.outer-ul{      
+      @include flex-sa-c;
+      list-style: none;
+      width: 40%;
+
+      li{
+         width:25%;
+         text-align: center;
+   
+         a{
+            color:$dark-clr;
+            text-decoration: none;
+            font-weight: 400;
+            transition: .3s;
+   
+            &:hover{
+               color: $red-clr;
+               border-left: 2px solid $red-clr;
+               border-right: 2px solid $red-clr;
+               padding:0 .3em;
+            }
+         }
+      } 
+   }
+
+   .nav-img{
+      width:30%;  
+   }
+
+   .nav-icons{
+      width: 30%;
+
+      div{
+         svg{
+            min-height:30px;
+            min-width:30px;
+            margin:0 .5rem;
+            cursor: pointer;
+            transition: .3s;
+
+            &.icon-on{
+               color:$blue-clr;
+            }
+   
+            &:hover{
+               color: $blue-clr;
+            }
+         }
+      }   
+   }
+}
+
+@media (max-width: 768px){
+   .nav-main{
+      padding:1em 0;
+      .nav-img{
+         display: none;
+      }
+
+      ul.outer-ul{
+         width:70%;
+      }
+
+      .nav-icons{
+         width: 30%;
+         border-left: 2px solid black;
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .nav-main{
+      padding:.5em 0;
+      ul.outer-ul{
+         width:50%;
+         li:nth-child(3),
+         li:nth-child(4){
+            display: none;
+         }
+
+         li{
+            a{
+               &:hover{
+                  border:0;
+                  padding: 0;
+               }
+            }
+         }
+         
+      }
+
+      .nav-icons{
+         width:40%;
+         margin:0;
+         @include flex-sa-c;
+      }
+   }
+} 

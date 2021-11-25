@@ -1,0 +1,70 @@
+@import '../config';
+
+.footer-c{
+   background: rgba($color: #fff, $alpha: .8);
+   border-top:2px solid black;
+   @include flex-c-c;
+   flex-direction: column;
+   padding:1em 0;
+
+   div:not(.ft-text){
+      @include flex-sa-c;
+      flex-wrap: wrap;
+
+      svg{
+         width:50px;
+         height:50px;
+         margin:0 1em;
+      }
+
+      a{
+         text-decoration: none;
+
+         &:nth-child(1){ color:rgb(15, 140, 179); }
+         &:nth-child(2){ color:rgb(96, 8, 196); }
+         &:nth-child(3){ color:rgb(218, 22, 22); }
+         &:nth-child(4){ color:rgb(90, 190, 9); }
+
+         &:hover{
+            opacity:.8;
+         }
+      }
+   
+   }
+
+   div.ft-text{
+      margin:2em 0;
+
+      h2{
+         text-align: center;
+      }
+      
+   }
+
+   ul{
+      @include flex-sa-c;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li{
+         margin:.3em 1em;
+
+         a{
+            color:black;
+            text-decoration: none;
+            font-weight: 400;
+
+            &:hover{
+               color:$blue-clr;
+            }
+         }
+      }
+   }
+
+   p{
+      &.red{
+         color: $red-clr;
+      }
+      font-weight: 400;
+   }
+}

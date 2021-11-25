@@ -1,0 +1,115 @@
+.offer-cont article section {
+  width: 33%;
+  height: 24vw;
+  border: 2px solid #15e9a2;
+  border-radius: .3em;
+  margin-bottom: 4px;
+  padding: 1em 2em;
+  background: linear-gradient(45deg, rgba(173, 232, 198, 0.95) 50%, rgba(167, 221, 206, 0.95) 50%);
+}
+
+.offer-cont article section .img-div {
+  width: 8vw;
+  height: 35%;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto .5em auto;
+  border: 1px solid #303030;
+}
+
+.offer-cont article section .img-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.offer-cont article section .text-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 65%;
+}
+
+.offer-cont article section .text-cont h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  font-family: 'Luckiest Guy', cursive;
+  margin-bottom: .5em;
+}
+
+.offer-cont article section .text-cont p {
+  font-size: clamp(0.6rem, 1.1vw, 0.8rem);
+  text-align: center;
+  font-weight: 500;
+}
+
+.offer-cont article section .text-cont .btn-div {
+  width: 100%;
+}
+
+.offer-cont article section .text-cont .btn-div button {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: .4em 0;
+  margin: .5em 0 0 0;
+  background: none;
+  outline: 0;
+  border-radius: .3em;
+  border: 2px solid #006eff;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offer-cont article section .text-cont .btn-div button:hover {
+  background: cornflowerblue;
+}
+
+.offer-cont article section .text-cont .btn-div button:hover span {
+  color: #faf6f6;
+}
+
+.offer-cont article section .text-cont .btn-div button span {
+  color: #006eff;
+  font-weight: 100;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+
+@media (max-width: 1200px) {
+  .offer-cont article section {
+    height: 30vw;
+  }
+  .offer-cont article section .img-div {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-cont article section {
+    width: 15.3em;
+    height: 250px;
+  }
+  .offer-cont article section .img-div {
+    width: 5em;
+  }
+}
